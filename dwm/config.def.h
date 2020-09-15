@@ -43,7 +43,6 @@ static const char *colors[][3]      = {
     [SchemeSel]  = { sel_fg,      sel_bg,    sel_border },  // the focused win
     [SchemeUrg] =  { urg_fg,      urg_bg,    urg_border },
 };
-~
 
 static const unsigned int alphas[][3]      = {
 	/*               fg      bg        border     */
