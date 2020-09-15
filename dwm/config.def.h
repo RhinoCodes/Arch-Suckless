@@ -25,7 +25,25 @@ static const char col_cyan[]        = "#005577";
 static const char col_urgborder[]   = "#ff0000";
 static const unsigned int baralpha = 0x8C;
 static const unsigned int borderalpha = OPAQUE;
-#include "/home/willf/.cache/wal/colors-wal-dwm.h"
+static const char norm_fg[] = "#b4ccd9";
+static const char norm_bg[] = "#1b1e25";
+static const char norm_border[] = "#7d8e97";
+
+static const char sel_fg[] = "#b4ccd9";
+static const char sel_bg[] = "#566E8F";
+static const char sel_border[] = "#b4ccd9";
+
+static const char urg_fg[] = "#b4ccd9";
+static const char urg_bg[] = "#9D7A68";
+static const char urg_border[] = "#9D7A68";
+
+static const char *colors[][3]      = {
+    /*               fg           bg         border                         */
+    [SchemeNorm] = { norm_fg,     norm_bg,   norm_border }, // unfocused wins
+    [SchemeSel]  = { sel_fg,      sel_bg,    sel_border },  // the focused win
+    [SchemeUrg] =  { urg_fg,      urg_bg,    urg_border },
+};
+~
 
 static const unsigned int alphas[][3]      = {
 	/*               fg      bg        border     */
