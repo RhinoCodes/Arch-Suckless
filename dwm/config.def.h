@@ -91,13 +91,13 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_centered", "-m", dmenumon, "-fn", dmenufont, NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *termcmd[]  = { "alacritty", "-e", "bash", NULL };
 
 #include "selfrestart.c"
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_p,      spawn,          SHCMD("dmenu_centered") },
+	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
